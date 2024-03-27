@@ -8,6 +8,7 @@ import com.example.demo.repository.LogRepo;
 
 @Service
 public class LogService {
+    public static final String RegService = null;
     @Autowired
     private LogRepo rep;
     public Login log(String username, String password){

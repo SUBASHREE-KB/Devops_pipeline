@@ -10,13 +10,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.domain.Login;
 import com.example.demo.service.LogService;
+import com.example.demo.service.RegService;
 
 @Controller
 public class LogController {
  
     @Autowired
     private LogService service;
- 
+   
     @GetMapping("/")
     public String api()
     {
@@ -35,7 +36,13 @@ public class LogController {
             return "redirect:/";
         }
     }
- 
+    @GetMapping("/register")
+    public String apic()
+    {
+        return "register";
+    }
+
+   
     @GetMapping("/disp")
     public String display() {
         return "display";
